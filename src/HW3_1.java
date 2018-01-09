@@ -8,70 +8,70 @@ import javax.swing.*;
 //This calculator
 
 public class HW3_1 extends JFrame implements ActionListener{
-	JCheckBox apple, banana, grape, strawberry;//Ã¼Å©¹Ú½ºµé ¼±¾ð
-	JPanel panel;//ÆÐ³Î ¼±¾ð
-	JPanel panel2;//ÆÐ³Î2 ¼±¾ð
-	JButton ok;//ok ¹öÆ° ¼±¾ð
-	JButton cancel;//cancel¹öÆ° ¼±¾ð
-	JLabel label;//¶óº§ ¼±¾ð
-	String line;//½ºÆ®¸µ ¼±¾ð
+	JCheckBox apple, banana, grape, strawberry;//Ã¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	JPanel panel;//ï¿½Ð³ï¿½ ï¿½ï¿½ï¿½ï¿½
+	JPanel panel2;//ï¿½Ð³ï¿½2 ï¿½ï¿½ï¿½ï¿½
+	JButton ok;//ok ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½
+	JButton cancel;//cancelï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½
+	JLabel label;//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	String line;//ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	HW3_1(){
-		setTitle("FRUIT SELECTION");//Ã¢ÀÇ Å¸ÀÌÆ²À» ¼³Á¤
-		setSize(300, 200);//Ã¢ÀÇ Å©±â¸¦ ¼³Á¤
-		setDefaultCloseOperation(EXIT_ON_CLOSE);//Ã¢À» ´ÝÀ¸¸é ÇÁ·Î±×·¥ Á¾·á
-		setLayout(new BorderLayout());//borderlayoutÁ¤·Ä»ç¿ë
-		label = new JLabel("Choose the fruit you like.");//¶óº§ »ý¼º
-		panel = new JPanel();//ÆÐ³Î »ý¼º
-		panel2 = new JPanel();//ÆÐ³Î2 »ý¼º
-		ok = new JButton("OK");//ok¹öÆ° »ý¼º
-		cancel = new JButton("Cancel");//cancel¹öÆ° »ý¼º
-		apple = new JCheckBox("Apple");//appleÃ¼Å©¹Ú½º »ý¼º
-		banana = new JCheckBox("Banana");//bananaÃ¼Å©¹Ú½º »ý¼º
-		grape = new JCheckBox("Grape");//grapeÃ¼Å©¹Ú½º »ý¼º
-		strawberry = new JCheckBox("Strawberry");//strawberryÃ¼Å©¹Ú½º »ý¼º
-		ok.addActionListener(this);//ok¹öÆ°¿¡ Å¬¸¯ ÀÌº¥Æ® Àû¿ë
-		cancel.addActionListener(this);//cancel¹öÆ°¿¡ Å¬¸¯ ÀÌº¥Æ® Àû¿ë
-		label.setHorizontalAlignment(JLabel.CENTER);//¶óº§À» Áß¾ÓÀ¸·Î Á¤·Ä
-		add(label, BorderLayout.PAGE_START);//¶óº§À» ÆäÀÌÁö ½ÃÀÛºÎºÐ(¸Ç À­ºÎºÐ)¿¡ ´õÇÑ´Ù
-		panel.setLayout(new GridLayout(2, 2));//ÆÐ³ÎÀ» °¡·Î 2, ¼¼·Î 2·Î Á¤·Ä
-		panel.add(apple);//ÆÐ³Î¿¡ appleÃ¼Å©¹Ú½º¸¦ ´õÇÑ´Ù
-		panel.add(banana);//ÆÐ³Î¿¡ bananaÃ¼Å©¹Ú½º¸¦ ´õÇÑ´Ù
-		panel.add(grape);//ÆÐ³Î¿¡ grapeÃ¼Å©¹Ú½º¸¦ ´õÇÑ´Ù
-		panel.add(strawberry);//ÆÐ³Î¿¡ strawberryÃ¼Å©¹Ú½º¸¦ ´õÇÑ´Ù
-		add(panel, BorderLayout.CENTER);//ÆÐ³ÎÀ» Áß¾ÓÀ¸·Î À§Ä¡ÇÏµµ·Ï ÇÏ¿© ´õÇÑ´Ù
-		panel2.add(ok);//ÆÐ³Î2¿¡ ok¹öÆ°À» ´õÇÑ´Ù
-		panel2.add(cancel);//ÆÐ³Î2¿¡ cancel¹öÆ°À» ´õÇÑ´Ù
-		add(panel2, BorderLayout.SOUTH);//ÆÐ³Î2¸¦ Ã¢ÀÇ ¾Æ·§ºÎºÐÀ¸·Î À§Ä¡½ÃÅ°¸é¼­ ´õÇÑ´Ù
-		setVisible(true);//Ã¢ÀÌ º¸ÀÌµµ·Ï ÇÑ´Ù
+		setTitle("FRUIT SELECTION");//Ã¢ï¿½ï¿½ Å¸ï¿½ï¿½Æ²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		setSize(300, 200);//Ã¢ï¿½ï¿½ Å©ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½
+		setDefaultCloseOperation(EXIT_ON_CLOSE);//Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½
+		setLayout(new BorderLayout());//borderlayoutï¿½ï¿½ï¿½Ä»ï¿½ï¿½
+		label = new JLabel("Choose the fruit you like.");//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		panel = new JPanel();//ï¿½Ð³ï¿½ ï¿½ï¿½ï¿½ï¿½
+		panel2 = new JPanel();//ï¿½Ð³ï¿½2 ï¿½ï¿½ï¿½ï¿½
+		ok = new JButton("OK");//okï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½
+		cancel = new JButton("Cancel");//cancelï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½
+		apple = new JCheckBox("Apple");//appleÃ¼Å©ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		banana = new JCheckBox("Banana");//bananaÃ¼Å©ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		grape = new JCheckBox("Grape");//grapeÃ¼Å©ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		strawberry = new JCheckBox("Strawberry");//strawberryÃ¼Å©ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		ok.addActionListener(this);//okï¿½ï¿½Æ°ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+		cancel.addActionListener(this);//cancelï¿½ï¿½Æ°ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+		label.setHorizontalAlignment(JLabel.CENTER);//ï¿½ï¿½ï¿½ï¿½ ï¿½ß¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		add(label, BorderLayout.PAGE_START);//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÛºÎºï¿½(ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½)ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		panel.setLayout(new GridLayout(2, 2));//ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 2, ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		panel.add(apple);//ï¿½Ð³Î¿ï¿½ appleÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		panel.add(banana);//ï¿½Ð³Î¿ï¿½ bananaÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		panel.add(grape);//ï¿½Ð³Î¿ï¿½ grapeÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		panel.add(strawberry);//ï¿½Ð³Î¿ï¿½ strawberryÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		add(panel, BorderLayout.CENTER);//ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ß¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		panel2.add(ok);//ï¿½Ð³ï¿½2ï¿½ï¿½ okï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		panel2.add(cancel);//ï¿½Ð³ï¿½2ï¿½ï¿½ cancelï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
+		add(panel2, BorderLayout.SOUTH);//ï¿½Ð³ï¿½2ï¿½ï¿½ Ã¢ï¿½ï¿½ ï¿½Æ·ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½Å°ï¿½é¼­ ï¿½ï¿½ï¿½Ñ´ï¿½
+		setVisible(true);//Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½
 	}
 	public void actionPerformed(ActionEvent e){
-		if(e.getSource()==ok){//ok¹öÆ°À» ´­·¶À» ¶§
-			line = "You like ";//line¼³Á¤
-			if(apple.isSelected()){//appleÃ¼Å©¹Ú½º°¡ ¼±ÅÃµÆ´Ù¸é
-				line = line+"Apple ";//line¿¡ "apple "¹®ÀÚ¿­À» ºÙÀÎ´Ù
+		if(e.getSource()==ok){//okï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+			line = "You like ";//lineï¿½ï¿½ï¿½ï¿½
+			if(apple.isSelected()){//appleÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÆ´Ù¸ï¿½
+				line = line+"Apple ";//lineï¿½ï¿½ "apple "ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½
 			}
-			if(banana.isSelected()){//bananaÃ¼Å©¹Ú½º°¡ ¼±ÅÃµÆ´Ù¸é
-				line = line+"Banana ";//line¿¡ "banana "¹®ÀÚ¿­À» ºÙÀÎ´Ù
+			if(banana.isSelected()){//bananaÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÆ´Ù¸ï¿½
+				line = line+"Banana ";//lineï¿½ï¿½ "banana "ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½
 			}
-			if(grape.isSelected()){//grapeÃ¼Å©¹Ú½º°¡ ¼±ÅÃµÆ´Ù¸é
-				line = line+"Grape ";//line¿¡ "grape "¹®ÀÚ¿­À» ºÙÀÎ´Ù
+			if(grape.isSelected()){//grapeÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÆ´Ù¸ï¿½
+				line = line+"Grape ";//lineï¿½ï¿½ "grape "ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½
 			}
-			if(strawberry.isSelected()){//strawberryÃ¼Å©¹Ú½º°¡ ¼±ÅÃµÆ´Ù¸é
-				line = line+"Strawberry ";//line¿¡ "strawberry "¹®ÀÚ¿­À» ºÙÀÎ´Ù
+			if(strawberry.isSelected()){//strawberryÃ¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÆ´Ù¸ï¿½
+				line = line+"Strawberry ";//lineï¿½ï¿½ "strawberry "ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½
 			}
 			if(!apple.isSelected()&&!banana.isSelected()
 					&&!grape.isSelected()&&!strawberry.isSelected())
-				//¾î¶² Ã¼Å©¹Ú½ºµµ ¼±ÅÃµÇÁö ¾Ê¾Ò´Ù¸é
-				line = "You like nothing";//lineÀ» ´Ù½Ã ¼³Á¤
-			label.setText(line);//¶óº§À» line°ªÀ¸·Î ¼³Á¤
+				//ï¿½î¶² Ã¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ ï¿½Ê¾Ò´Ù¸ï¿½
+				line = "You like nothing";//lineï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			label.setText(line);//ï¿½ï¿½ï¿½ï¿½ lineï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		}
-		if(e.getSource()==cancel){//cancel¹öÆ°À» ´­·¶´Ù¸é
+		if(e.getSource()==cancel){//cancelï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½
 			apple.setSelected(false);
 			banana.setSelected(false);
 			grape.setSelected(false);
 			strawberry.setSelected(false);
-			//¸ðµç Ã¼Å©¹Ú½ºÀÇ Ç¥½Ã¸¦ Áö¿î´Ù
-			label.setText("Choose the fruit you like.");//¶óº§°ªÀ» ´Ù½Ã ¼³Á¤
+			//ï¿½ï¿½ï¿½ Ã¼Å©ï¿½Ú½ï¿½ï¿½ï¿½ Ç¥ï¿½Ã¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+			label.setText("Choose the fruit you like.");//ï¿½óº§°ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		}
 	}
 	public static void main(String[] args) {
@@ -81,8 +81,6 @@ public class HW3_1 extends JFrame implements ActionListener{
 		System.out.println("ID: 1515056");
 		System.out.println("Name: Sehui Jeon");
 		System.out.println("===========================");
-		HW3_1 hw3_1= new HW3_1();//hw3_1°´Ã¼ »ý¼º
-		
+		HW3_1 hw3_1= new HW3_1();//hw3_1ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½		
 	}
-
 }
