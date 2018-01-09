@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+//This calculator
+
 public class HW3_1 extends JFrame implements ActionListener{
 	JCheckBox apple, banana, grape, strawberry;//체크박스들 선언
 	JPanel panel;//패널 선언
